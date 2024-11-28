@@ -1,0 +1,77 @@
+---
+import '../styles/main.css'
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Justin Covell's personal site" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Justin Covell's personal site</title>
+    </head>
+    <body class="font-serif py-20 text-6xl">
+        <header class="font-serifFancy">
+            <div class="fixed right-5 top-0">
+                <div
+                    id="options-menu"
+                    class="px-2 pb-5 border border-black border-b-0 border-t-0"
+                >
+                    <label
+                        for="simple-font-check"
+                        class="rounded border-2 p-2 text-xs simple-font-label"
+                        style="font-family: ui-serif;">Simple font</label
+                    >
+                    <input
+                        id="simple-font-check"
+                        type="checkbox"
+                        class="hidden"
+                    />
+                </div>
+                <label
+                    for="options-menu-toggle"
+                    title="Open options"
+                    id="options-menu-toggle-closed"
+                    class="border border-black border-t-0 p-2 text-xs absolute top-0 right-5"
+                    style="font-family: arial;">V</label
+                >
+                <label
+                    for="options-menu-toggle"
+                    title="Close options"
+                    id="options-menu-toggle-open"
+                    class="border border-t-0 border-black p-2 text-xs"
+                    style="font-family: arial;">&Lambda;</label
+                >
+                <input
+                    id="options-menu-toggle"
+                    type="checkbox"
+                    class="hidden"
+                />
+            </div>
+            <h1 class="text-center">This is my personal site</h1>
+            <div
+                class="flex justify-center m-5 border-b-2 border-gray-200 space-x-5 py-5 text-2xl"
+            >
+                <a href="/">Home</a>
+                <a href="/posts">Posts</a>
+                <a href="/about">About</a>
+            </div>
+        </header>
+    </body>
+    <main class="p-5">
+        <slot />
+    </main>
+    <script>
+        import { isSimpleFonts } from '../store'
+
+        const toggleSimpleFonts = () => isSimpleFonts.set(!isSimpleFonts.get())
+        const checkbox = document.getElementById(
+            'simple-font-check'
+        ) as HTMLInputElement
+        if (checkbox !== null) {
+            checkbox.onchange = toggleSimpleFonts
+            isSimpleFonts.subscribe((v) => (checkbox.checked = v))
+        }
+    </script>
+</html>

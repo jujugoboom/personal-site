@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Rothenburg Decorative';
+    src: url('/fonts/rothenbg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Olde English';
+    src: url('/fonts/OldeEnglishRegular-Zd2J.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  #options-menu {
+    display: none;
+  }
+  
+  #options-menu-toggle-open {
+    display: none;
+  }
+
+  :has(#options-menu-toggle:checked) {
+    #options-menu {
+      display: block
+    }
+    #options-menu-toggle-closed {
+      display: none;
+    }
+    #options-menu-toggle-open {
+      display: block;
+    }
+  }
+
+  :has(#simple-font-check:checked) {
+    .font-serif {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+    .font-serifFancy {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+    .simple-font-label {
+      background-color: #62a859;
+    }
+  }
+}
