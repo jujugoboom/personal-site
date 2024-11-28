@@ -50,3 +50,10 @@
     }
   }
 }
+
+.footnotes {
+  @apply text-xl;
+  ol {
+    list-style-type: decimal;
+  }
+}

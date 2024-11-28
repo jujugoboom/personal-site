@@ -4,7 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import BasicContentLayout from '../layouts/BasicContentLayout.astro'
 
 const pageTitle = 'My posts'
-const allPosts = await getCollection('posts', (e) => !e.data.draft)
+const allPosts = await getCollection('posts', (e) =>
+    import.meta.env.PROD ? !e.data.draft : true
+)
+allPosts.sort((a, b) => b.data.postDate.getTime() - a.data.postDate.getTime())
 ---
 
 <BasicContentLayout title={pageTitle}>

@@ -11,12 +11,12 @@ import '../styles/main.css'
         <meta name="generator" content={Astro.generator} />
         <title>Justin Covell's personal site</title>
     </head>
-    <body class="font-serif py-20 text-6xl">
+    <body class="font-serif py-20 text-4xl dark:bg-neutral-950 dark:text-white">
         <header class="font-serifFancy">
             <div class="fixed right-5 top-0">
                 <div
                     id="options-menu"
-                    class="px-2 pb-5 border border-black border-b-0 border-t-0"
+                    class="px-2 pb-5 border border-black dark:border-white border-b-0 border-t-0"
                 >
                     <label
                         for="simple-font-check"
@@ -33,14 +33,14 @@ import '../styles/main.css'
                     for="options-menu-toggle"
                     title="Open options"
                     id="options-menu-toggle-closed"
-                    class="border border-black border-t-0 p-2 text-xs absolute top-0 right-5"
+                    class="border border-black dark:border-white border-t-0 p-2 text-xs absolute top-0 right-5"
                     style="font-family: arial;">V</label
                 >
                 <label
                     for="options-menu-toggle"
                     title="Close options"
                     id="options-menu-toggle-open"
-                    class="border border-t-0 border-black p-2 text-xs"
+                    class="border border-t-0 border-black dark:border-white p-2 text-xs"
                     style="font-family: arial;">&Lambda;</label
                 >
                 <input
