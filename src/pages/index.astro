@@ -7,13 +7,13 @@ const allPosts = await getCollection('posts', (e) =>
     import.meta.env.PROD ? !e.data.draft : true
 )
 allPosts.sort((a, b) => b.data.postDate.getTime() - a.data.postDate.getTime())
-const latestPosts = allPosts.toReversed().slice(0, 10)
+const latestPosts = allPosts.reverse().slice(0, 10)
 
 const refrences = await getCollection('refrence')
 refrences.sort(
     (a, b) => b.data.lastUpdated.getTime() - a.data.lastUpdated.getTime()
 )
-const latestRefrences = refrences.toReversed().slice(0, 10)
+const latestRefrences = refrences.reverse().slice(0, 10)
 ---
 
 <BaseLayout
@@ -35,13 +35,13 @@ const latestRefrences = refrences.toReversed().slice(0, 10)
             <h1 class="text-2xl my-2">Refrences</h1>
             <ul class="py-5">
                 {
-                    refrences.map((p) => (
+                    latestRefrences.map((p) => (
                         <li>
                             <a href={`refrence/${p.slug}`}>{p.data.title}</a>
                         </li>
                     ))
                 }
-                {refrences.length === 0 && <li>No refrences</li>}
+                {latestRefrences.length === 0 && <li>No refrences</li>}
             </ul>
         </div>
     </div>
