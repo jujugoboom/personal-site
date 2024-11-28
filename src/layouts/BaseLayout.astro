@@ -18,36 +18,38 @@ import '../styles/main.css'
                     id="options-menu"
                     class="px-2 pb-5 border border-black dark:border-white border-b-0 border-t-0"
                 >
-                    <label
-                        for="simple-font-check"
-                        class="rounded border-2 p-2 text-xs simple-font-label"
-                        style="font-family: ui-serif;">Simple font</label
-                    >
                     <input
                         id="simple-font-check"
                         type="checkbox"
-                        class="hidden"
+                        class="absolute m-0 p-0 appearance-none overflow-hidden peer"
                     />
+                    <label
+                        for="simple-font-check"
+                        class="rounded border-2 p-2 text-xs simple-font-label peer-focus:outline"
+                        style="font-family: ui-serif;">Simple font</label
+                    >
                 </div>
-                <label
-                    for="options-menu-toggle"
-                    title="Open options"
-                    id="options-menu-toggle-closed"
-                    class="border border-black dark:border-white border-t-0 p-2 text-xs absolute top-0 right-5"
-                    style="font-family: arial;">V</label
-                >
-                <label
-                    for="options-menu-toggle"
-                    title="Close options"
-                    id="options-menu-toggle-open"
-                    class="border border-t-0 border-black dark:border-white p-2 text-xs"
-                    style="font-family: arial;">&Lambda;</label
-                >
-                <input
-                    id="options-menu-toggle"
-                    type="checkbox"
-                    class="hidden"
-                />
+                <div>
+                    <input
+                        id="options-menu-toggle"
+                        type="checkbox"
+                        class="absolute m-0 p-0 appearance-none overflow-hidden peer"
+                    />
+                    <label
+                        for="options-menu-toggle"
+                        title="Open options"
+                        id="options-menu-toggle-closed"
+                        class="border border-black dark:border-white border-t-0 p-2 text-xs absolute top-0 right-5 peer-focus:outline"
+                        style="font-family: arial;">V</label
+                    >
+                    <label
+                        for="options-menu-toggle"
+                        title="Close options"
+                        id="options-menu-toggle-open"
+                        class="border border-t-0 border-black dark:border-white p-2 text-xs peer-focus:outline"
+                        style="font-family: arial;">&Lambda;</label
+                    >
+                </div>
             </div>
             <h1 class="text-center">This is my personal site</h1>
             <div
