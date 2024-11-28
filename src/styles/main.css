@@ -66,6 +66,12 @@
     }
   }
 
+  :has(#dark-mode-check:checked) {
+    .dark-mode-label {
+      background-color: #62a859;
+    }
+  }
+
   :has(#simple-font-check:checked) {
     .font-serif {
       font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;

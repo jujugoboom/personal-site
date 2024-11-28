@@ -6,12 +6,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 const allPosts = await getCollection('posts', (e) =>
     import.meta.env.PROD ? !e.data.draft : true
 )
-allPosts.sort((a, b) => b.data.postDate.getTime() - a.data.postDate.getTime())
+allPosts.sort((a, b) => a.data.postDate.getTime() - b.data.postDate.getTime())
 const latestPosts = allPosts.reverse().slice(0, 10)
 
 const refrences = await getCollection('refrence')
 refrences.sort(
-    (a, b) => b.data.lastUpdated.getTime() - a.data.lastUpdated.getTime()
+    (a, b) => a.data.lastUpdated.getTime() - b.data.lastUpdated.getTime()
 )
 const latestRefrences = refrences.reverse().slice(0, 10)
 ---
