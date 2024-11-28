@@ -18,7 +18,10 @@ The growing influence of the writings of [Patrick Deneen] has been quiet, but no
 
 While some on the left, including notable figures such as Barack Obama, gave kudos to [Patrick] for his observations of the failings of modern liberal democracies, but critiqued his lack of solutions and overall ambiguity around any proposed alternatives. After several years of trying, and with gradual changes to his political views, [Patrick] found an audience on the american right. 
 
-In a perfect brew of timing and overall social climate, a growing extreme right in america needing a shared set of political ideals to build off of, and [Patrick]'s growing personal extremism, matched to help each other grow. By gaining the backing of the larger american right, [Patrick] found the validation he had been craving for years. The right also found a stable foundation to build its thoughts off of, using the framework of postliberalism to posit each pundits personal agenda. 
+In a perfect brew of timing and overall social climate, a growing extreme right in america needing a shared set of political ideals to build off of, and [Patrick]'s growing personal extremism, matched to help each other grow. By gaining the backing of the larger american right, [Patrick] found the validation he had been craving for years. The right also found a stable foundation to build its thoughts off of, using the framework of postliberalism to posit each pundits personal agenda. Though this, people like [Elon Musk] found footing for his techno-feudalist ideals, as well as the cover needed to do it under the guise of a greater mission to mars.
+
+
 
 [Patrick Deneen]: /refrence/patrick-deneen "Patrick Deneen"
 [Patrick]: /refrence/patrick-deneen "Patrick Deneen"
+[Elon Musk]: /refrence/elon-musk "Elon Musk"

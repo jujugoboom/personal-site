@@ -6,11 +6,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                serifFancy: [
-                    'Rothenburg Decorative',
-                    ...defaultTheme.fontFamily.serif,
-                ],
-                serif: ['Olde English', ...defaultTheme.fontFamily.serif],
+                serif: ['Ghostech-Regular', ...defaultTheme.fontFamily.serif],
             },
         },
     },
