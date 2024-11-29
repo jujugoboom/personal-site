@@ -6,6 +6,7 @@ const postCollection = defineCollection({
         title: z.string(),
         draft: z.boolean(),
         postDate: z.date(),
+        lastUpdated: z.date(),
         tags: z.array(z.string()).optional(),
     }),
 })

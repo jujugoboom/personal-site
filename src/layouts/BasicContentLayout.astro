@@ -4,9 +4,11 @@ import BaseLayout from './BaseLayout.astro'
 interface Props {
     title: string
     tags?: string[]
+    postDate?: Date
+    lastUpdated?: Date
 }
 
-const { title, tags } = Astro.props
+const { title, tags, postDate, lastUpdated } = Astro.props
 ---
 
 <BaseLayout>
@@ -14,16 +16,42 @@ const { title, tags } = Astro.props
         <h1 class="text-4xl sm:px-10 sm:py-10 sm:text-7xl">
             {title}
         </h1>
-        {
-            tags && (
-                <span class="text-sm space-x-2 pb-10">
-                    Tagged: &nbsp;
-                    {tags.map((t, i) => (
-                        <a href={`/tagged/${t}`}>{t}</a>
-                    ))}
-                </span>
-            )
-        }
+        <section class="flex flex-col">
+            {
+                postDate && (
+                    <span class="text-sm">
+                        Posted{' '}
+                        {new Date(
+                            postDate.setUTCHours(
+                                new Date().getTimezoneOffset() / 60
+                            )
+                        ).toLocaleDateString()}
+                    </span>
+                )
+            }
+            {
+                lastUpdated && (
+                    <span class="text-sm">
+                        Updated{' '}
+                        {new Date(
+                            lastUpdated.setUTCHours(
+                                new Date().getTimezoneOffset() / 60
+                            )
+                        ).toLocaleDateString()}
+                    </span>
+                )
+            }
+            {
+                tags && (
+                    <span class="text-sm space-x-2 pb-10">
+                        Tagged: &nbsp;
+                        {tags.map((t, i) => (
+                            <a href={`/tagged/${t}`}>{t}</a>
+                        ))}
+                    </span>
+                )
+            }
+        </section>
         <article class="post-body">
             <slot />
         </article>

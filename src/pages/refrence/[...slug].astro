@@ -14,4 +14,7 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<BasicContentLayout title={entry.data.title}><Content /></BasicContentLayout>
+<BasicContentLayout
+    title={entry.data.title}
+    lastUpdated={entry.data.lastUpdated}><Content /></BasicContentLayout
+>
