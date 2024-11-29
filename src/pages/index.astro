@@ -17,10 +17,10 @@ const latestRefrences = refrences.reverse().slice(0, 10)
 ---
 
 <BaseLayout
-    ><div class="flex">
+    ><div class="flex flex-col sm:flex-row text-4xl">
         <div class="flex-1 p-5 divide-y-2">
             <h1 class="text-2xl my-2">Latest Posts</h1>
-            <ul class="py-5">
+            <ul class="py-5 space-y-2">
                 {
                     latestPosts.map((p) => (
                         <li>
@@ -33,7 +33,7 @@ const latestRefrences = refrences.reverse().slice(0, 10)
         </div>
         <div class="flex-1 p-5 divide-y-2">
             <h1 class="text-2xl my-2">Refrences</h1>
-            <ul class="py-5">
+            <ul class="py-5 space-y-2">
                 {
                     latestRefrences.map((p) => (
                         <li>
@@ -45,9 +45,9 @@ const latestRefrences = refrences.reverse().slice(0, 10)
             </ul>
         </div>
     </div>
-    <div class="p-5 divide-y-2">
+    <div class="p-5 divide-y-2 text-4xl">
         <h1 class="text-2xl my-2">Things I like</h1>
-        <ul class="py-5">
+        <ul class="py-5 space-y-2">
             <li><a href="https://shadertoy.com">Shadertoy</a></li>
             <li><a href="https://www.hackthissite.org/">Hack this site</a></li>
             <li><a href="https://riseup.net">riseup</a></li>

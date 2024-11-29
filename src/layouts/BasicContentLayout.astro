@@ -3,14 +3,29 @@ import BaseLayout from './BaseLayout.astro'
 
 interface Props {
     title: string
+    tags?: string[]
 }
 
-const { title } = Astro.props
+const { title, tags } = Astro.props
 ---
 
 <BaseLayout>
-    <div class="mx-24 space-y-5">
-        <h1 class="font-serifFancy px-24 py-10 text-7xl">{title}</h1>
-        <slot />
+    <div class="sm:mx-20 space-y-5">
+        <h1 class="text-4xl sm:px-10 sm:py-10 sm:text-7xl">
+            {title}
+        </h1>
+        {
+            tags && (
+                <span class="text-sm space-x-2 pb-10">
+                    Tagged: &nbsp;
+                    {tags.map((t, i) => (
+                        <a href={`/tagged/${t}`}>{t}</a>
+                    ))}
+                </span>
+            )
+        }
+        <article class="post-body">
+            <slot />
+        </article>
     </div>
 </BaseLayout>

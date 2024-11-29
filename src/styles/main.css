@@ -82,6 +82,31 @@
   }
 }
 
+@layer components {
+  .post-body {
+    @apply break-before-auto space-y-2; 
+
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-4xl p-2;
+    }
+    h1 {
+      @apply sm:text-7xl sm:p-5;
+    }
+    h2 {
+      @apply sm:text-6xl sm:p-5;
+    }
+    h3 {
+      @apply sm:text-5xl sm:p-5;
+    }
+    h4, h5, h6 {
+      @apply sm:p-5
+    }
+    p {
+      @apply text-2xl;
+    }
+  }
+}
+
 .footnotes {
   @apply text-xl;
   ol {

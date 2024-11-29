@@ -11,14 +11,14 @@ import '../styles/main.css'
         <meta name="generator" content={Astro.generator} />
         <title>Justin Covell's personal site</title>
     </head>
-    <body class="font-serif py-20 text-4xl dark:bg-neutral-950 dark:text-white">
-        <header class="font-serifFancy">
+    <body class="font-serif py-20 dark:bg-neutral-950 dark:text-white">
+        <header class="font-serif">
             <div class="fixed right-5 top-0">
                 <div
                     id="options-menu"
-                    class="px-2 pb-5 border border-black dark:border-white border-b-0 border-t-0"
+                    class="px-2 pb-5 border border-black dark:border-white border-b-0 border-t-0 leading-10"
                 >
-                    <div>
+                    <div class="flex-1">
                         <input
                             id="simple-font-check"
                             type="checkbox"
@@ -30,7 +30,7 @@ import '../styles/main.css'
                             style="font-family: ui-serif;">Simple font</label
                         >
                     </div>
-                    <div>
+                    <div class="flex-1">
                         <input
                             id="dark-mode-check"
                             type="checkbox"
@@ -65,7 +65,7 @@ import '../styles/main.css'
                     >
                 </div>
             </div>
-            <h1 class="text-center">This is my personal site</h1>
+            <h1 class="text-center text-6xl">This is my personal site</h1>
             <div
                 class="flex justify-center m-5 border-b-2 border-gray-200 space-x-5 py-5 text-2xl"
             >

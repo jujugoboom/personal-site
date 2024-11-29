@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content'
+import BasicContentLayout from '../../layouts/BasicContentLayout.astro'
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection('posts', (e) =>
+        import.meta.env.PROD ? !e.data.draft : true
+    )
+
+    const uniqueTags = [
+        ...new Set(allPosts.map((post) => post.data.tags ?? []).flat()),
+    ]
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = allPosts.filter((post) =>
+            post.data.tags?.includes(tag)
+        )
+        return {
+            params: { slug: tag },
+            props: { posts: filteredPosts },
+        }
+    })
+}
+
+const { slug } = Astro.params
+
+const pageTitle = `Posts tagged with ${slug}`
+const { posts } = Astro.props
+---
+
+<BasicContentLayout title={pageTitle}>
+    <ul class="py-5 space-y-2 text-2xl sm:text-4xl">
+        {
+            posts.map((p) => (
+                <li>
+                    <a href={`/posts/${p.slug}`}>{p.data.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</BasicContentLayout>
