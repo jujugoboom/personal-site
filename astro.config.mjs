@@ -8,6 +8,6 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
     site: 'https://justincovell.com',
-    integrations: [tailwind({ applyBaseStyles: false }), sitemap()],
+    integrations: [tailwind(), sitemap()],
     output: 'static',
 })

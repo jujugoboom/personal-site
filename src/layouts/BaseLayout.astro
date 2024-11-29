@@ -1,5 +1,5 @@
 ---
-import '../styles/main.css'
+
 ---
 
 <html lang="en">
@@ -10,8 +10,102 @@ import '../styles/main.css'
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Justin Covell's personal site</title>
+        <style>
+            /*
+            Font: 		Ghostech
+            Style: 		Regular
+            URL: 		https://youworkforthem.com/font/T24711/ghostech
+            Foundry: 	Arief Setyo Wahyudi
+            Foundry: 	https://youworkforthem.com/designer/909/arief-setyo-wahyudi
+            Copyright:	
+            Version: 	17
+            Created:	July 03, 2024
+            License: 	https://www.youworkforthem.com/font-license 
+            License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+                    WebFont license rules. All other parties are strictly restricted 
+                    from using the WebFonts(s) listed without a purchased license. 
+                    All details above must always remain unaltered and visible in your CSS.
+            */
+
+            @font-face {
+                font-family: 'Ghostech-Regular';
+                src: url('/fonts/ghostech-regular.eot');
+                src:
+                    url('/fonts/ghostech-regular.eot?#iefix')
+                        format('embedded-opentype'),
+                    url('/fonts/ghostech-regular.woff2') format('woff2'),
+                    url('/fonts/ghostech-regular.woff') format('woff'),
+                    url('/fonts/ghostech-regular.ttf') format('truetype'),
+                    url('/fonts/ghostech-regular.svg#youworkforthem')
+                        format('svg');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            #options-menu {
+                display: none;
+            }
+
+            #options-menu-toggle-open {
+                display: none;
+            }
+
+            :has(#options-menu-toggle:checked) {
+                #options-menu {
+                    display: block;
+                }
+                #options-menu-toggle-closed {
+                    display: none;
+                }
+                #options-menu-toggle-open {
+                    display: block;
+                }
+            }
+
+            :has(#dark-mode-check:checked) {
+                .dark-mode-label {
+                    background-color: #62a859;
+                }
+            }
+
+            :has(#simple-font-check:checked) {
+                .font-serif {
+                    font-family: ui-serif, Georgia, Cambria, 'Times New Roman',
+                        Times, serif;
+                }
+                .simple-font-label {
+                    background-color: #62a859;
+                }
+            }
+        </style>
     </head>
     <body class="font-serif py-20 dark:bg-neutral-950 dark:text-white">
+        <script>
+            import { isSimpleFonts, darkMode } from '../store'
+
+            const toggleSimpleFonts = () =>
+                isSimpleFonts.set(!isSimpleFonts.get())
+            const checkbox = document.getElementById(
+                'simple-font-check'
+            ) as HTMLInputElement
+            if (checkbox !== null) {
+                checkbox.onchange = toggleSimpleFonts
+                isSimpleFonts.subscribe((v) => (checkbox.checked = v))
+            }
+
+            const toggleDarkMode = () => darkMode.set(!darkMode.get())
+            const darkModeCheckbox = document.getElementById(
+                'dark-mode-check'
+            ) as HTMLInputElement
+            if (darkModeCheckbox !== null) {
+                darkModeCheckbox.onchange = toggleDarkMode
+                darkMode.subscribe((v) => {
+                    document.documentElement.classList.toggle('dark', v)
+                    darkModeCheckbox.checked = v
+                })
+            }
+        </script>
         <header class="font-serif">
             <div class="fixed right-5 top-0">
                 <div
@@ -74,32 +168,8 @@ import '../styles/main.css'
                 <a href="/about">About</a>
             </div>
         </header>
+        <main class="p-5">
+            <slot />
+        </main>
     </body>
-    <main class="p-5">
-        <slot />
-    </main>
-    <script>
-        import { isSimpleFonts, darkMode } from '../store'
-
-        const toggleSimpleFonts = () => isSimpleFonts.set(!isSimpleFonts.get())
-        const checkbox = document.getElementById(
-            'simple-font-check'
-        ) as HTMLInputElement
-        if (checkbox !== null) {
-            checkbox.onchange = toggleSimpleFonts
-            isSimpleFonts.subscribe((v) => (checkbox.checked = v))
-        }
-
-        const toggleDarkMode = () => darkMode.set(!darkMode.get())
-        const darkModeCheckbox = document.getElementById(
-            'dark-mode-check'
-        ) as HTMLInputElement
-        if (darkModeCheckbox !== null) {
-            darkModeCheckbox.onchange = toggleDarkMode
-            darkMode.subscribe((v) => {
-                document.documentElement.classList.toggle('dark', v)
-                darkModeCheckbox.checked = v
-            })
-        }
-    </script>
 </html>
