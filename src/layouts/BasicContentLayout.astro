@@ -82,7 +82,7 @@ const { title, tags, postDate, lastUpdated } = Astro.props
                 tags && (
                     <span class="text-sm space-x-2 pb-10">
                         Tagged: &nbsp;
-                        {tags.map((t, i) => (
+                        {tags.map((t) => (
                             <a href={`/tagged/${t}`}>{t}</a>
                         ))}
                     </span>
