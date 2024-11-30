@@ -14,7 +14,7 @@ const { title, tags, postDate, lastUpdated } = Astro.props
 <BaseLayout>
     <style>
         .post-body {
-            @apply break-before-auto space-y-2;
+            @apply break-before-auto space-y-2 max-w-5xl;
 
             h1,
             h2,
@@ -50,7 +50,7 @@ const { title, tags, postDate, lastUpdated } = Astro.props
         }
     </style>
     <div class="sm:mx-20 space-y-5">
-        <h1 class="text-4xl sm:px-10 sm:py-10 sm:text-7xl">
+        <h1 class="text-4xl sm:mx-10 sm:my-10 sm:text-7xl max-w-5xl">
             {title}
         </h1>
         <section class="flex flex-col">
