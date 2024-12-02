@@ -9,6 +9,8 @@ jobs:
     runs-on: docker
     steps:
       - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
       - name: Build
         run: npm run build
       - name: Deploy
