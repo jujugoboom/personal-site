@@ -8,3 +8,5 @@ tags:
   - politics
   - ai
 ---
+
+In the last few years we have seen massive numbers of our collective resources go towards... intelligence?
