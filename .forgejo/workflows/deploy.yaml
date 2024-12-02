@@ -12,7 +12,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: https://github.com/cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_PAGES_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
