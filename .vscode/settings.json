@@ -8,5 +8,8 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///home/justin/personal-site/.forgejo/workflows/deploy.yaml"
     }
 }
