@@ -43,6 +43,7 @@
                 font-weight: normal;
                 font-style: normal;
                 font-display: swap;
+                size-adjust: 120%;
             }
 
             #options-menu {
@@ -70,6 +71,10 @@
                     background-color: #62a859;
                 }
             }
+
+            /* :not(:has(#simple-font-check:checked)) {
+                letter-spacing: 0.1rem;
+            } */
 
             :has(#simple-font-check:checked) {
                 .font-serif {
