@@ -41,6 +41,10 @@ const { title, tags, postDate, lastUpdated } = Astro.props
             p {
                 @apply text-2xl;
             }
+
+            p > code {
+                @apply bg-[#1a1b26] text-[#a9b1d6] whitespace-pre text-base p-1 mx-1;
+            }
         }
         .footnotes {
             ol {

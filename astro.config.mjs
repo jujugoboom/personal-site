@@ -10,4 +10,9 @@ export default defineConfig({
     site: 'https://justincovell.com',
     integrations: [tailwind(), sitemap()],
     output: 'static',
+    markdown: {
+        shikiConfig: {
+            theme: 'tokyo-night',
+        },
+    },
 })
