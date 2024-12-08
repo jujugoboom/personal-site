@@ -58,11 +58,11 @@ if (!("hello" in a))
 
 This may all seem trite, but there is a differece to things. In the case of removing duplicate elements from an array there is a pretty significant difference in performance. 
 
-![Array dedupe benchmark](../../images/js-array-dedup-benchmark.png)
+![Array dedupe benchmark](../../assets/js-array-dedup-benchmark.png)
 
 This could matter more if you’re doing this often, but many people aren’t aware of the `Set` API, so its likely that a good number of js code you could find may do something more similar to the `filter()`. For checking a property in an array, theres slightly more surprising results 
 
-![Object property existence benchmark](../../images/object-property-exists-benchmark.png) 
+![Object property existence benchmark](../../assets/object-property-exists-benchmark.png) 
 
 Where the more readable (IMO) `in` syntax is significantly slower.
 
