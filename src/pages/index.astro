@@ -24,7 +24,7 @@ const latestRefrences = refrences.reverse().slice(0, 10)
                 {
                     latestPosts.map((p) => (
                         <li>
-                            <a href={`posts/${p.slug}`}>{p.data.title}</a>
+                            <a href={`posts/${p.id}`}>{p.data.title}</a>
                         </li>
                     ))
                 }
@@ -37,7 +37,7 @@ const latestRefrences = refrences.reverse().slice(0, 10)
                 {
                     latestRefrences.map((p) => (
                         <li>
-                            <a href={`refrence/${p.slug}`}>{p.data.title}</a>
+                            <a href={`refrence/${p.id}`}>{p.data.title}</a>
                         </li>
                     ))
                 }

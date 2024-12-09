@@ -16,15 +16,15 @@ export async function getStaticPaths() {
             post.data.tags?.includes(tag)
         )
         return {
-            params: { slug: tag },
+            params: { id: tag },
             props: { posts: filteredPosts },
         }
     })
 }
 
-const { slug } = Astro.params
+const { id } = Astro.params
 
-const pageTitle = `Posts tagged with ${slug}`
+const pageTitle = `Posts tagged with ${id}`
 const { posts } = Astro.props
 ---
 
@@ -33,7 +33,7 @@ const { posts } = Astro.props
         {
             posts.map((p) => (
                 <li>
-                    <a href={`/posts/${p.slug}`}>{p.data.title}</a>
+                    <a href={`/posts/${p.id}`}>{p.data.title}</a>
                 </li>
             ))
         }

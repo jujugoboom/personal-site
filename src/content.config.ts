@@ -1,7 +1,8 @@
 import { z, defineCollection } from 'astro:content'
+import { glob } from 'astro/loaders'
 
 const postCollection = defineCollection({
-    type: 'content',
+    loader: glob({ pattern: '**/*.md', base: './src/data/posts' }),
     schema: z.object({
         title: z.string(),
         draft: z.boolean(),
@@ -12,7 +13,7 @@ const postCollection = defineCollection({
 })
 
 const referenceCollection = defineCollection({
-    type: 'content',
+    loader: glob({ pattern: '**/*.md', base: './src/data/refrence' }),
     schema: z.object({
         title: z.string(),
         lastUpdated: z.date(),
