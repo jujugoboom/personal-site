@@ -9,6 +9,11 @@ export default {
             fontFamily: {
                 serif: ['Ghostech-Regular', ...defaultTheme.fontFamily.serif],
             },
+            colors: {
+                ...defaultTheme.colors,
+                paper: '#f1e8d8',
+                'paper-border': '#ebdec7',
+            },
         },
     },
     plugins: [],
