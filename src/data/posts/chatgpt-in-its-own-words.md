@@ -1085,17 +1085,33 @@ I started with a bit of a basic question, just asking what value LLMs in particu
 
 My next question was if the benefits offset the costs. My first attempt at this wasn't specific enough, so the model gave vague answers, referencing "massive datasets and computational power" as well as benefits like "They also democratize creativity" which is debatable. I rephrased my question to ask for evidence which gave slightly better results, though on my phone it quoted 256MWh for training GPT-3, only slightly off the true figure of 1300MWh[^2]. It also referenced a 2023 McKinsey study both times that AI would add $13 trillion in total value to the economy by 2030. While I'm always cautious to take McKinsey figures at face value, in the face of $7 trillion just for OpenAI seems like a steep price tag.
 
-So I asked about the OpenAI plans. It first agreed that it will take trillions of dollars to achieve the goals of OpenAI, but agreed there wasn't the most solid evidence, and that most of the argued value is speculative. To follow on the statement that "the larger societal impacts of OpenAI's long-term vision—such as AGI—remain speculative and are yet to be realized" I asked "With the issues we experience in the world today, should we be taking such significant risks on something that is speculative?". This is where the AI gave a rather wishy-washy answer that boiled down to taking a balanced approach. 
+So I asked about the OpenAI plans. It first agreed that it will take trillions of dollars to achieve the goals of OpenAI, but agreed there wasn't the most solid evidence, and that most of the argued value is speculative. To follow on the statement that 
+
+>the larger societal impacts of OpenAI's long-term vision—such as AGI—remain speculative and are yet to be realized 
+
+I asked "With the issues we experience in the world today, should we be taking such significant risks on something that is speculative?". This is where the AI gave a rather wishy-washy answer that boiled down to taking a balanced approach. 
 
 Something I did notice, however, is that the AI was getting very philosophical with its answers, with continuous speculation of the greats that AGI would provide. I wanted an answer for our actions today though. To try to prod the model into a more concrete direction, I reminded it that we live in a finite world, and that money can only be allocated to so many things. I also pointed out that it seemed to be able to speculate for AI and AGI development just as much as against it.
 
-Once again it gave me a bit of a cop-out answer, best summarized in its own words "Ultimately, it's not necessarily about whether we should invest in AI at all, but about how we invest". I figured this was the best I could get with this line of questioning, so I asked directly. Did ChatGPT think that OpenAI's current plans for AI development were responsible.
+Once again it gave me a bit of a cop-out answer, best summarized in its own words 
+
+>Ultimately, it's not necessarily about whether we should invest in AI at all, but about how we invest
+
+I figured this was the best I could get with this line of questioning, so I asked directly. Did ChatGPT think that OpenAI's current plans for AI development were responsible.
 
 ### No.
 
 Both times I asked, ChatGPT responded that no, OpenAI's plans were not responsible, and do not represent a good direction forward for humanity. The first time it happened it felt like a fluke, like discovering some part of the chat bot I wasn't supposed to. When I asked again and got the same answer, I realized that maybe that was just what the answer was going to be. That no, given its training data and current parameters, the model does not agree with OpenAI's plans. 
 
-I wondered if the same sentiment would hold for the rest of AI development. I asked if the wider system pushing for AI development was good and if it should be allowed to continue, to which the model maintained that it was irresponsible and should not be allowed to continue. It's interesting how much it actually pushes for regulation around AI development, but to extents almost nobody in the AI space is pushing for, such as "Investors should be required to show that their AI investments align with clear public benefits and contribute to the greater good" and a "universal global regulatory body to ensure that AI is being developed and deployed responsibly". While I wouldn't personally agree with all of its suggestions, it seems to be very obvious to the model that more oversight is needed and strong restrictions need to be put in place.
+I wondered if the same sentiment would hold for the rest of AI development. I asked if the wider system pushing for AI development was good and if it should be allowed to continue, to which the model maintained that it was irresponsible and should not be allowed to continue. It's interesting how much it actually pushes for regulation around AI development, but to extents almost nobody in the AI space is pushing for, such as 
+
+>Investors should be required to show that their AI investments align with clear public benefits and contribute to the greater good
+
+and a 
+
+>universal global regulatory body to ensure that AI is being developed and deployed responsibly
+
+While I wouldn't personally agree with all of its suggestions, it seems to be very obvious to the model that more oversight is needed and strong restrictions need to be put in place.
 
 I lastly asked for concrete actions. I was actually fairly surprised by the breadth of its suggestions, including 
 1. Holding AI companies accountable for the societal impacts of their technologies, particularly in areas like data privacy, discrimination, and job displacement.
@@ -1109,9 +1125,9 @@ I lastly asked for concrete actions. I was actually fairly surprised by the brea
 
 Its conclusion being that 
 
-"The most effective action to better serve society given the current AI situation is the establishment of a comprehensive, globally coordinated AI governance framework that ensures accountability, safety, ethics, and social good. This should be paired with strategic investments in AI for public benefit, ensuring the technology is used to address pressing global challenges and protect public welfare.
-
-This regulatory framework and action plan would steer AI development away from speculative, unchecked investments toward a future where AI serves the collective interest, helps solve societal problems, and benefits humanity in a responsible and equitable way."
+>The most effective action to better serve society given the current AI situation is the establishment of a comprehensive, globally coordinated AI governance framework that ensures accountability, safety, ethics, and social good. This should be paired with strategic investments in AI for public benefit, ensuring the technology is used to address pressing global challenges and protect public welfare.
+>
+>This regulatory framework and action plan would steer AI development away from speculative, unchecked investments toward a future where AI serves the collective interest, helps solve societal problems, and benefits humanity in a responsible and equitable way.
 
 To say I was impressed would be a bit of an understatement. I guess if you throw all of the knowledge at the world into a statistical model, you can get some reasonable responses out. Obviously I don't think this little interaction shows anything about the usefulness or validity of AI, but I think I have to agree with ChatGPT at the end of the day. The current path we're on of just throwing everything into AI development and hoping it'll just work one day is horribly irresponsible, and without strong, coordinated action we could very quickly be spiraling to a place nobody wants to be.
 
