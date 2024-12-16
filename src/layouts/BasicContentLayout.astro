@@ -45,6 +45,12 @@ const { title, tags, postDate, lastUpdated } = Astro.props
             p > code {
                 @apply bg-[#1a1b26] text-[#a9b1d6] whitespace-pre text-base px-1 pt-1 mx-1;
             }
+            ol {
+                list-style: inside lower-roman;
+            }
+            details {
+                @apply rounded border border-slate-900 shadow dark:shadow-slate-500 p-2;
+            }
         }
         .footnotes {
             ol {
