@@ -11,7 +11,7 @@ interface Props {
 const { title, tags, postDate, lastUpdated } = Astro.props
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
     <style is:global>
         .post-body {
             @apply break-before-auto space-y-2 max-w-5xl;
