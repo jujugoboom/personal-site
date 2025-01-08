@@ -11,7 +11,7 @@ interface Props {
 const { title, tags, postDate, lastUpdated } = Astro.props
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
     <style is:global>
         .post-body {
             @apply break-before-auto space-y-2 max-w-5xl;
@@ -43,13 +43,17 @@ const { title, tags, postDate, lastUpdated } = Astro.props
             }
 
             p > code {
-                @apply bg-[#1a1b26] text-[#a9b1d6] whitespace-pre text-base px-1 pt-1 mx-1;
+                @apply dark:bg-[#1a1b26] dark:text-[#a9b1d6] whitespace-pre text-base px-1 pt-1 mx-1;
             }
             ol {
                 list-style: inside lower-roman;
+                @apply text-2xl px-4;
             }
             details {
-                @apply rounded border border-slate-900 shadow dark:shadow-slate-500 p-2;
+                @apply rounded border border-slate-900 shadow dark:shadow-slate-700 p-2;
+            }
+            blockquote {
+                @apply p-4 my-4 border-s-4 border-paper-border bg-gray-50 dark:border-gray-500 dark:bg-gray-800 shadow dark:shadow-slate-700;
             }
         }
         .footnotes {

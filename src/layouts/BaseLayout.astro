@@ -1,5 +1,9 @@
 ---
+interface Props {
+    title?: string
+}
 
+const { title } = Astro.props
 ---
 
 <html lang="en">
@@ -9,7 +13,11 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
-        <title>Justin Covell's personal site</title>
+        <title>
+            {
+                `${title !== undefined ? `${title} - ` : ''}Justin Covell's personal site`
+            }
+        </title>
         <link
             rel="preload"
             as="font"
@@ -96,8 +104,9 @@
                 }
             }
         </style>
-    </head>
-    <body class="font-serif py-20 bg-paper dark:bg-neutral-900 dark:text-white">
+    </head><body
+        class="font-serif py-20 bg-paper dark:bg-neutral-900 dark:text-white"
+    >
         <script>
             import { isSimpleFonts, darkMode } from '../store'
 
