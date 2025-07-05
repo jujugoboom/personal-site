@@ -26,8 +26,16 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        uses: https://github.com/cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_PAGES_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=personal-site
+        # uses: https://github.com/cloudflare/wrangler-action@v3
+        # with:
+        #   apiToken: ${{ secrets.CF_PAGES_TOKEN }}
+        #   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        #   command: pages deploy dist --project-name=personal-site
+        run:
+          git config --global user.name "forgejo-runner[bot]"
+          git config --global user.email "forgejo-runner"
+
+          git add -A
+          git commit -m "Deploy $(git rev-parse --short HEAD)"
+          git push
+
