@@ -1,6 +1,6 @@
 ---
 title: Zig killed rust
-draft: false
+draft: true
 postDate: 2024-12-10
 lastUpdated: 2024-12-10
 tags:

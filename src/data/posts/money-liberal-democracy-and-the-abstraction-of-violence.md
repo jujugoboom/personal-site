@@ -1,6 +1,6 @@
 ---
 title: Money, liberal democracy, and the abstraction of violence
-draft: false
+draft: true
 postDate: 2024-11-28
 lastUpdated: 2024-11-28
 tags:

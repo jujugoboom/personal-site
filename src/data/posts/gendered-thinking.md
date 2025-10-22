@@ -1,6 +1,6 @@
 ---
 title: The gendering of thought
-draft: false
+draft: true
 postDate: 2024-11-29
 lastUpdated: 2024-11-29
 tags:
